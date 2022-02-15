@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "237135936697",
+    "project_id": "todo-list-provider-af",
+    "storage_bucket": "todo-list-provider-af.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:237135936697:android:47f374304a926c159f6f68",
+        "android_client_info": {
+          "package_name": "br.com.academiadoflutter.todo_list_provider"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "237135936697-pfutoj0oct26f2e6utca78gkup0t0bmn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.academiadoflutter.todo_list_provider",
+            "certificate_hash": "ff605c3e857a6f3b55d15b2d042c6107b46db08b"
+          }
+        },
+        {
+          "client_id": "237135936697-4lvvj5gfldojcmb08jes32ej6kpiq25k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3zvhAqXcjxf4DA9SSi7ofE_7L5-e0mBY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "237135936697-4lvvj5gfldojcmb08jes32ej6kpiq25k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
