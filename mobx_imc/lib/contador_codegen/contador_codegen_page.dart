@@ -4,7 +4,7 @@ import 'package:mobx/mobx.dart';
 import 'package:mobx_imc/contador_codegen/contador_codegen_controller.dart';
 
 class ContadorCodeGenPage extends StatefulWidget {
-  ContadorCodeGenPage({Key? key}) : super(key: key);
+  const ContadorCodeGenPage({Key? key}) : super(key: key);
 
   @override
   State<ContadorCodeGenPage> createState() => _ContadorCodeGenPageState();

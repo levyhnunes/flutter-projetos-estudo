@@ -28,40 +28,45 @@ class TodoListField extends StatelessWidget {
     return ValueListenableBuilder<bool>(
       valueListenable: obscureTextVN,
       builder: (_, obscureTextValue, child) {
-        return TextFormField(
-          controller: controller,
-          validator: validator,
-          focusNode: focusNode,
-          decoration: InputDecoration(
-            labelText: label,
-            labelStyle: const TextStyle(
-              fontSize: 15,
-              color: Colors.black,
+        return Column(
+          children: [
+            Text(label),
+            TextFormField(
+              controller: controller,
+              validator: validator,
+              focusNode: focusNode,
+              decoration: InputDecoration(
+                // labelText: label,
+                // labelStyle: const TextStyle(
+                //   fontSize: 15,
+                //   color: Colors.black,
+                // ),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(5),
+                ),
+                errorBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(30),
+                  borderSide: const BorderSide(color: Colors.red),
+                ),
+                isDense: true,
+                suffixIcon: suffixIconButton ??
+                    (obscureText == true
+                        ? IconButton(
+                            onPressed: () {
+                              obscureTextVN.value = !obscureTextValue;
+                            },
+                            icon: Icon(
+                              !obscureTextValue
+                                  ? TodoListIcons.eye_slash
+                                  : TodoListIcons.eye,
+                              size: 15,
+                            ),
+                          )
+                        : null),
+              ),
+              obscureText: obscureTextValue,
             ),
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(30),
-            ),
-            errorBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(30),
-              borderSide: const BorderSide(color: Colors.red),
-            ),
-            isDense: true,
-            suffixIcon: suffixIconButton ??
-                (obscureText == true
-                    ? IconButton(
-                        onPressed: () {
-                          obscureTextVN.value = !obscureTextValue;
-                        },
-                        icon: Icon(
-                          !obscureTextValue
-                              ? TodoListIcons.eye_slash
-                              : TodoListIcons.eye,
-                          size: 15,
-                        ),
-                      )
-                    : null),
-          ),
-          obscureText: obscureTextValue,
+          ],
         );
       },
     );

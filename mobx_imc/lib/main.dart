@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mobx_imc/contador/contador_page.dart';
-
 import 'contador_codegen/contador_codegen_page.dart';
 
 void main() {
@@ -18,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: ContadorCodeGenPage(),
+      home: const ContadorCodeGenPage(),
     );
   }
 }
